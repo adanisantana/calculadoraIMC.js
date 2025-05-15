@@ -8,6 +8,13 @@ function imc(){
     const peso = parseFloat(document.getElementById('peso').value);
     const resultado = document.getElementById('resultado');
 
+    
+    if(altura <= 0 || peso<=0 ){
+        alert(resultado.textContent='Por favor, preencha altura e/ou peso com valores válidos!');
+        return;
+    }
+    
+
     if(nome !== '' && altura !== '' && peso!==''){
         const valorIMC= parseFloat((peso/(altura * altura)).toFixed(2));
         
